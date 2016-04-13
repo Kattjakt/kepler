@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/Kattjakt/kepler/issues"
   },
-  "homepage": "https://github.com/Kattjakt/kepler"
+  "homepage": "https://github.com/Kattjakt/kepler",
+  "dependencies": {
+    "cli-spinner": "^0.2.5",
+    "log-util": "^1.1.1",
+    "oauth": "^0.9.14",
+    "soundcloud-nodejs-api-wrapper": "^0.3.2"
+  }
 }
