@@ -1,0 +1,19 @@
+{
+  "name": "kepler",
+  "version": "1.0.0",
+  "description": "Utility for downloading liked songs on Soundcloud and pushing them to Google Play Music",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kattjakt/kepler"
+  },
+  "author": "Leo Sandström",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kattjakt/kepler/issues"
+  },
+  "homepage": "https://github.com/Kattjakt/kepler"
+}
