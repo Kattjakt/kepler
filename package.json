@@ -20,6 +20,7 @@
     "cli-spinner": "^0.2.5",
     "log-util": "^1.1.1",
     "oauth": "^0.9.14",
+    "playmusic": "^2.1.1",
     "soundcloud-nodejs-api-wrapper": "^0.3.2"
   }
 }

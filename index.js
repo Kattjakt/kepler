@@ -10,8 +10,9 @@ new Kepler({
             password: '',
         },
         playmusic: {
-            username: '',
-            password: ''
+            email: '',
+            password: '',
+            androidId: ''
         }
     }
 });
