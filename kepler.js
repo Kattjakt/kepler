@@ -4,6 +4,10 @@ var log = require('log-util');
 var spinner = require('cli-spinner').Spinner;
 var fs = require('fs');
 
+var Login = require('./login');
+
+
+
 var client = {};
 
 var data = [];
@@ -32,55 +36,11 @@ var fetch = function () {
 }
 
 var Kepler = function (settings) {
-    var sc = new SC(settings.credentials.soundcloud);
-    var pm = new PM();
+
+    Login();
     
-    client = sc.client();
-
-    var logins = [];
     
-    logins.push(new Promise(function (resolve, reject) {
-        client.exchange_token((err, result) => {
-            if (err) return log.error(err);
 
-            var data = arguments[3];
-            
-            log.verbose('fetched SC login token');
-            log.debug('successfully signed in to Soundcloud');
-
-            client = sc.client({
-                access_token : data.access_token
-            });
-            
-            resolve();
-        });
-    }));
-                               
-    logins.push(new Promise(function (resolve, reject) {
-        pm.login(settings.credentials.playmusic, function(err, data) {
-            if(err) return log.error(err);
-            log.verbose('fetched PM login token')
-            
-            pm.init({
-                'androidId': data.androidId, 
-                'masterToken': data.masterToken
-            }, function(err, data) {
-                if(err) console.error(err);
-                log.debug('successfully logged into Google Play Music');
-
-                resolve();
-            });
-        });
-    }));
-    
-    Promise.all(logins).then(function (data) {
-        console.log('wohi');
-        
-        //fetch().then((data) => {
-        //    console.log('update');
-        //});
-
-    });
 }
 
 module.exports = Kepler;
